@@ -1,0 +1,20 @@
+.linked {
+    color: #e3e3e3;
+    text-decoration: underline;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+  .linked:hover {
+    color: #f95959;
+    opacity: 0.9;
+  }
+  
+  .icon {
+    font-size: 0.75rem;
+    transform: translateY(-1px);
+    opacity: 0.75;
+  }
+  

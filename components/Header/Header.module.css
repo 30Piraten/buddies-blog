@@ -1,0 +1,20 @@
+/* components/Header.module.css */
+
+.header {
+    padding: 1rem 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--forground);
+    text-decoration: none;
+    font-family: var(--font-ubuntuMonoBold), latin;
+}
+

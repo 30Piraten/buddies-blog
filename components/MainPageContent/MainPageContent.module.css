@@ -1,0 +1,9 @@
+.section {
+    margin: 3em;
+     width: 50%;
+ }
+ 
+ .paragraph {
+     color: var(--foreground);
+     font-family: var(--font-UbuntuRegular);
+ }

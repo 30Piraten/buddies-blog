@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: left;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+.navList:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.navList:before {
+    content: "";
+    display: block;
+    margin-top: -1.25em;
+}
+
+.navLi {
+    display: inline-block; 
+    margin-right: 1em/1.5 -.25em;
+    padding: .75em 1.5em;
+    position: relative;
+    top: 1.25em;
+}
+
+.navList li {
+    margin: 1rem 0;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: inherit;
+    color: var(--foreground);
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-family: var(--font-ubuntuRegular);
+}
+
+.link:hover {
+    color: #f95959;
+    transform: scale(1.05);
+}
