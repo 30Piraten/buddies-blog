@@ -8,8 +8,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-ubuntuRegular);
-  --font-mono: var(--font-ubuntuRegular);
+  /* --font-sans: var(--font-ubuntuRegular);
+  --font-mono: var(--font-ubuntuRegular); */
+  --font-sans: var(--font-rubikNormal);
+  --font-mono: var(--font-rubikNormal);
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,9 +24,11 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-ubuntuRegular), latin;
+  /* font-family: var(--font-ubuntuRegular), latin; */
+  font-family: var(--font-rubikNormal);
 }
 
 h1, h2, .logo {
-  font-family: var(--font-ubuntuMonoBold), latin;
+  /* font-family: var(--font-ubuntuMonoBold), latin; */
+  font-family: var(--font-rubikBold);
 }

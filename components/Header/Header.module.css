@@ -15,6 +15,7 @@
     font-weight: bold;
     color: var(--forground);
     text-decoration: none;
-    font-family: var(--font-ubuntuMonoBold), latin;
+    /* font-family: var(--font-ubuntuMonoBold), latin; */
+    font-family: var(--font-rubikBold)
 }
 

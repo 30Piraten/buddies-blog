@@ -8,17 +8,17 @@ export default function BodyCentralised() {
             <ul className={styles.navList}>
                 <li className={styles.navLi}>
                     <Link href="/about" className={styles.link}>
-                        About
+                        about
                     </Link>
                 </li>
                 <li className={styles.navLi}>
                     <Link href="/roadmap" className={styles.link}>
-                        Roadmap
+                        roadmap
                     </Link>
                 </li>
                 <li className={styles.navLi}>
                     <Link href="/notes" className={styles.link}>
-                        Notes: design & code
+                        notes: design & code
                     </Link>
                 </li>
             </ul>

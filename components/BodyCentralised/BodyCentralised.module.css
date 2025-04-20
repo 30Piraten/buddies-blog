@@ -40,14 +40,17 @@
 
 .link {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: inherit;
     color: var(--foreground);
     transition: color 0.3s ease, transform 0.2s ease;
-    font-family: var(--font-ubuntuRegular);
+    /* font-family: var(--font-ubuntuRegular); */
+    font-family: var(--font-rubikNormal);
 }
 
 .link:hover {
     color: #f95959;
     transform: scale(1.05);
+    text-decoration: none;
+    opacity: 0.9;
 }

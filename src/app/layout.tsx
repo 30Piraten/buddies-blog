@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Ubuntu, Geist, Geist_Mono } from "next/font/google";
+import { Rubik, Ubuntu, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css"
-import "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 
@@ -28,6 +27,18 @@ const ubuntuRegular = Ubuntu({
   weight: "300"
 })
 
+const rubikBold = Rubik({
+  variable: "--font-rubik",
+  subsets: ["latin"],
+  weight: "800"
+})
+
+const rubikNormal = Rubik({
+  variable: "--font-rubik",
+  subsets: ["latin"],
+  weight: "400"
+})
+
 export const metadata: Metadata = {
   title: "Buddy.me",
   description: "Gamified social app!",
@@ -41,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ubuntuMonoBold.variable} ${ubuntuRegular.variable} antialiased ${styles.page}`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ubuntuMonoBold.variable} ${ubuntuRegular.variable} ${rubikBold.variable} ${rubikNormal.variable}   antialiased ${styles.page}`}
       >
           <Header />
           <main className={styles.main}>{children}</main>

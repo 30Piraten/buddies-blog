@@ -8,6 +8,8 @@ const withMdx = nextMdx({
 })
 
 const nextConfig = withMdx({
+  transpilePackages: ['next-mdx-remote'],
+
   // Support MDX files as pages:
   pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
 })
