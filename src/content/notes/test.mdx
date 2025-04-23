@@ -16,8 +16,36 @@ code:
 
 Some `backticks` for inline.
 
-```javascript
-backtick.fences('for blocks')
+// Example TypeScript function within an MDX code block
+
+```typescript
+interface User {
+  id: number;
+  name: string;
+  isAdmin: boolean;
+}
+
+/**
+ * Greets a user.
+ * @param user - The user object.
+ * @returns A greeting string.
+ */
+function greetUser(user: User): string {
+  if (user.isAdmin) {
+    return `Hello, Admin ${user.name}! Welcome back.`;
+  }
+  return `Hello, ${user.name}!`;
+}
+
+// Example usage:
+const regularUser: User = { id: 1, name: 'Alice', isAdmin: false };
+const adminUser: User = { id: 2, name: 'Bob', isAdmin: true };
+
+console.log(greetUser(regularUser)); // Output: Hello, Alice!
+console.log(greetUser(adminUser));   // Output: Hello, Admin Bob! Welcome back.
+
+// You can embed this block directly into your .mdx file.
+// MDX processors will typically handle syntax highlighting.
 ```
 
 Image

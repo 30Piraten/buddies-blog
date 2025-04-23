@@ -4,8 +4,44 @@ import path from "path";
 import matter from "gray-matter";
 import PostLayout from "../../../../components/PostLayout/PostLayout";
 import Link from "next/link";
-import styles from "../../../../components/PostLayout/PostLayout.module.css"
+import styles from "../../../../components/PostLayout/PostLayout.module.css";
 import Image from "next/image";
+import ShareButtons from "../../../../components/ShareButton/ShareButton";
+
+// Generate metadata dynamically for each note
+export async function generateMetadata({ params }) {
+    const { slug } = params;
+
+    const notesDir = path.join("src/content/notes");
+    const filePath = path.join(notesDir, `${slug}.mdx`);
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const { data } = matter(fileContent);
+
+    return {
+        title: data.title,
+        description: data.description || "Check out this insightful note on Buddy.me",
+        openGraph: {
+            title: data.title,
+            description: data.description || "This note is packed with useful insights!",
+            url: `https://yourdomain.com/notes/${slug}`,
+            type: "article",
+            images: [
+                {
+                    url: data.image || "https://yourdomain.com/default-og-image.jpg", // Provide a fallback if no image
+                    width: 1200,
+                    height: 630,
+                    alt: data.title,
+                },
+            ],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: data.title,
+            description: data.description || "This is a detailed look into a topic.",
+            images: [data.image || "https://yourdomain.com/default-og-image.jpg"],
+        },
+    };
+}
 
 export async function generateStaticParams() {
     const notesDir = path.join("src/content/notes");
@@ -82,6 +118,7 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
                     )}
                 </div>
             </nav>
+            <ShareButtons title={currentPost.title} slug={`notes/${currentPost.slug}`} />
         </PostLayout>
     );
 }

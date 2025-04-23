@@ -1,0 +1,30 @@
+/* components/ShareButtons/ShareButtons.module.css */
+
+.shareContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.shareLabel {
+    font-weight: 500;
+}
+
+.shareBtn {
+    border: 1px solid #26252c;
+    border-radius: 6px;
+    padding: 0.4em 0.7em;
+    background: #f0f3f3;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.shareBtn:hover {
+    background: #e1e7e7;
+    transform: scale(1.03);
+}
