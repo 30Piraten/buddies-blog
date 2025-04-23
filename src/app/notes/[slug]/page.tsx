@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import PostLayout from "../../../../components/PostLayout/PostLayout";
 import Link from "next/link";
 import styles from "../../../../components/PostLayout/PostLayout.module.css"
+import Image from "next/image";
 
 export async function generateStaticParams() {
     const notesDir = path.join("src/content/notes");
@@ -32,6 +33,19 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
         };
     });
 
+    // @ts-ignore
+    const mdxComponents = {
+        img: (props) => (
+            <Image
+                {...props}
+                alt={props.alt}
+                src={props.src}
+                width={props.width || 600}
+                height={props.height || 400}
+            />
+        ),
+    };
+
     // Find current post index
     const currentIndex = posts.findIndex((p) => p.slug === slug);
     const prevPost = posts[currentIndex - 1] || null;
@@ -42,7 +56,7 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
     return (
         <PostLayout>
             <article>
-                <MDXRemote source={currentPost.content} />
+                <MDXRemote source={currentPost.content} components={mdxComponents} />
             </article>
 
             <nav className={styles.navContainer}>
