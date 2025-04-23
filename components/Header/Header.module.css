@@ -1,7 +1,14 @@
 /* components/Header.module.css */
 
+/* Header.module.css */
 .header {
-    padding: 1rem 0;
+    /*padding: 1rem 0;*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--background);
+    padding: 1rem 2rem;
+    /*border-bottom: 1px solid #ccc;*/
 }
 
 .container {
@@ -16,6 +23,6 @@
     color: var(--forground);
     text-decoration: none;
     /* font-family: var(--font-ubuntuMonoBold), latin; */
-    font-family: var(--font-rubikBold)
+    font-family: var(--font-rubik-bold)
 }
 

@@ -28,16 +28,16 @@ const ubuntuRegular = Ubuntu({
 })
 
 const rubikBold = Rubik({
-  variable: "--font-rubik",
-  subsets: ["latin"],
-  weight: "800"
-})
+    variable: "--font-rubik-bold",
+    subsets: ["latin"],
+    weight: "800",
+});
 
 const rubikNormal = Rubik({
-  variable: "--font-rubik",
-  subsets: ["latin"],
-  weight: "400"
-})
+    variable: "--font-rubik-normal",
+    subsets: ["latin"],
+    weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Buddy.me",
@@ -52,7 +52,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${ubuntuMonoBold.variable} ${ubuntuRegular.variable} ${rubikBold.variable} ${rubikNormal.variable}   antialiased ${styles.page}`}
+        className={`
+        ${geistSans.variable} 
+        ${geistMono.variable} 
+        ${ubuntuMonoBold.variable} 
+        ${ubuntuRegular.variable} 
+        ${rubikBold.variable} 
+        ${rubikNormal.variable}   
+        antialiased ${styles.page}`}
       >
           <Header />
           <main className={styles.main}>{children}</main>

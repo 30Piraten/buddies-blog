@@ -1,10 +1,21 @@
 .section {
-    margin: 3em;
-     width: 50%;
- }
- 
- .paragraph {
-     color: var(--foreground);
-     font-size: 1.1em;
-     font-family: var(--font-rubikNormal);
- }
+    margin: 3em auto;
+    width: 100%;
+    max-width: 42em;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.paragraph {
+    color: var(--foreground);
+    font-size: 1.1rem;
+    font-family: var(--font-rubik-normal);
+    line-height: 1.75;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .paragraph {
+        font-size: 1rem;
+    }
+}

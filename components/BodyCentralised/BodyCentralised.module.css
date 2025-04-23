@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem 1rem;
     min-height: 80vh;
     text-align: left;
 }
@@ -10,47 +11,39 @@
 .navList {
     list-style: none;
     padding: 0;
-    margin: 0;
-    text-align: justify;
-}
-
-.navList:after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-}
-
-.navList:before {
-    content: "";
-    display: block;
-    margin-top: -1.25em;
+    margin: 0 0 2rem 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .navLi {
-    display: inline-block; 
-    margin-right: 1em/1.5 -.25em;
-    padding: .75em 1.5em;
-    position: relative;
-    top: 1.25em;
-}
-
-.navList li {
-    margin: 1rem 0;
+    padding: 0.5rem 1rem;
 }
 
 .link {
     text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: inherit;
+    font-size: 1.6rem;
+    font-family: var(--font-rubik-normal);
     color: var(--foreground);
     transition: color 0.3s ease, transform 0.2s ease;
-    /* font-family: var(--font-ubuntuRegular); */
-    font-family: var(--font-rubikNormal);
 }
 
 .link:hover {
-    color: #f95959;
+    color: #4f3b78;
+    text-decoration: underline;
     transform: scale(1.05);
-    text-decoration: none;
     opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+    .link {
+        font-size: 1.2rem;
+    }
+
+    .navLi {
+        padding: 0.25rem 0.5rem;
+    }
 }

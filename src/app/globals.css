@@ -1,34 +1,27 @@
-@import "tailwindcss";
+/*/@import "tailwindcss";*/
 
 :root {
-  --background: #233142; 
-  --foreground: #e3e3e3;
+  --background: #f0f3f3;
+  --foreground: #26252c;
+  --default-font-family: var(--font-rubik-normal);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* --font-sans: var(--font-ubuntuRegular);
-  --font-mono: var(--font-ubuntuRegular); */
-  --font-sans: var(--font-rubikNormal);
-  --font-mono: var(--font-rubikNormal);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a; 
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-rubik-normal);
+  --font-mono: var(--font-rubik-normal);
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
-  /* font-family: var(--font-ubuntuRegular), latin; */
-  font-family: var(--font-rubikNormal);
+  font-family: var(--font-rubik-normal);
 }
 
 h1, h2, .logo {
-  /* font-family: var(--font-ubuntuMonoBold), latin; */
-  font-family: var(--font-rubikBold);
+  font-family: var(--font-rubik-bold);
 }

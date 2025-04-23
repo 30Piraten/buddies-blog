@@ -1,0 +1,203 @@
+.postContainer {
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    line-height: 1.75;
+    font-size: 1.125rem;
+    font-family: var(--font-rubik-normal);
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+}
+
+/* Headings */
+.postContainer h1,
+.postContainer h2,
+.postContainer h3,
+.postContainer h4,
+.postContainer h5,
+.postContainer h6 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    color: #26252c;
+    line-height: 1.3;
+}
+
+/* Paragraphs */
+.postContainer p {
+    margin: 1.25rem 0;
+}
+
+/* Blockquotes */
+.postContainer blockquote {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #26252c;
+    background: #26252c;
+    font-style: italic;
+    color: #f0f3f3;
+    border-radius: 4px;
+}
+
+/* Images */
+.postContainer img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tables */
+.postContainer table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+
+.postContainer th,
+.postContainer td {
+    border: 1px solid #26252c;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+/* Inline code */
+.postContainer code {
+    background-color: #26252c;
+    color: #f0f3f3;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: var(--font-rubik-normal), latin;
+    font-size: 0.95rem;
+}
+
+/* Code blocks */
+.postContainer pre {
+    background-color: #26252c;
+    color: #f0f3f3;
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 2rem 0;
+}
+
+/* Prevent double styling in nested <pre><code> */
+.postContainer pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+    font-size: inherit;
+    font-family: var(--font-rubik-normal), latin;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .postContainer {
+        padding: 1.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    .postContainer table,
+    .postContainer pre {
+        font-size: 0.95rem;
+    }
+
+    .postContainer h1 {
+        font-size: 1.8rem;
+    }
+
+    .postContainer h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/*For notes*/
+
+.notesList {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.noteItem {
+    padding: 1.25rem 1.5rem;
+    background-color: #f0f3f3;
+    border: 1px solid #26252c;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.noteItem:hover {
+    border-color: #26252c;
+    box-shadow: .5px 1px 1px #26252c;
+}
+
+.noteItem a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.strong {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #26252c;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.sm {
+    font-size: 0.95rem;
+    color: #26252c;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+/* Responsive polish */
+@media (max-width: 768px) {
+    .noteItem {
+        padding: 1rem 1.25rem;
+    }
+
+    .strong {
+        font-size: 1.1rem;
+    }
+
+    .sm {
+        font-size: 0.9rem;
+    }
+}
+
+/*Navigation buttons for prev, home and next*/
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; /* Ensures content is centered horizontally */
+    gap: 2rem; /* Space between items */
+    margin-top: 2rem;
+}
+
+.navLnk {
+    color: #4A4A4A;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navLnk:hover {
+    color: #d83c65; /* Hover color */
+}
+
+.homeLnk {
+    font-weight: 600;
+    text-align: center;
+}

@@ -1,5 +1,5 @@
 .linked {
-    color: #e3e3e3;
+    color: #363b4e;
     text-decoration: underline;
     display: inline-flex;
     align-items: center;
@@ -8,7 +8,7 @@
   }
   
   .linked:hover {
-    color: #f95959;
+    color: #927fbf;
     opacity: 0.9;
   }
   
