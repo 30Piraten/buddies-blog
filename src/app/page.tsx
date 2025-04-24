@@ -16,7 +16,7 @@ export default async function HomePage() {
           {pinned.map((post) => (
               <Link href={`/${post.slug}`} key={post.slug} className={styles.arCardPinned}>
                 <h2>{post.title}</h2>
-                <p>{post.description}</p>
+                <p className={styles.paragraph}>{post.description}</p>
                 {/*<p>{post.date}</p>*/}
               </Link>
           ))}
@@ -28,8 +28,8 @@ export default async function HomePage() {
             {notes.map((note) => (
                 <Link href={`/${note.slug}`} key={note.slug} className={styles.cardNote}>
                   <h4>{note.title}</h4>
-                  <p>{note.description}</p>
-                  <p>{new Intl.DateTimeFormat("en-US", {
+                  <p className={styles.paragraph}>{note.description}</p>
+                  <p className={styles.date}>{new Intl.DateTimeFormat("en-US", {
                     dateStyle: "medium",
                   }).format(new Date(note.date))}</p>
                 </Link>

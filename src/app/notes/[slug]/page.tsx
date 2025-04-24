@@ -10,7 +10,7 @@ import ShareButtons from "../../../../components/ShareButton/ShareButton";
 
 // Generate metadata dynamically for each note
 export async function generateMetadata({ params }) {
-    const { slug } = params;
+    const { slug } = await params;
 
     const notesDir = path.join("src/content/notes");
     const filePath = path.join(notesDir, `${slug}.mdx`);
